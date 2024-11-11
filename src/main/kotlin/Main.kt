@@ -1,5 +1,10 @@
 package org.example
 
-fun main() {
-    println("Hello World!")
-}
+import com.github.ajalt.clikt.core.main
+import com.github.ajalt.clikt.core.subcommands
+import core.commands.Init
+import core.commands.Kit
+
+fun main(args: Array<String>) = Kit()
+    .subcommands(Init())
+    .main(args)
